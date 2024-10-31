@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:sessiom3flutterproject/Modules/Home/View/home.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -94,7 +96,14 @@ class _LoginViewState extends State<LoginView> {
               const SizedBox(height: 50),
               GestureDetector(
                 onTap: () {
-                  print("Hello World! this user is logined.");
+                  // print("Hello World! this user is logined.");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HomeView(),
+                    ),
+                  );
+             
                 },
                 child: Container(
                   height: 50,
@@ -115,6 +124,32 @@ class _LoginViewState extends State<LoginView> {
                   ),
                 ),
               ),
+              const SizedBox(height: 50),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    "Don't have an account?",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "Click here",
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        decoration: TextDecoration.none,
+                      ),
+                    ),
+                  )
+                ],
+              )
             ],
           ),
         ),
