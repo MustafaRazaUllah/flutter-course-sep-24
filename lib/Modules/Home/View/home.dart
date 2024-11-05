@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/gridview_builder.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/listview.dart';
+import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/listview_builder.dart';
+import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/stack_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -38,18 +41,39 @@ class HomeView extends StatelessWidget {
               title: "ListView Builder",
               color: Colors.green,
               textColor: Colors.white,
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ListviewBuilderScreen(),
+                  ),
+                );
+              },
             ),
             _buildCard(
               title: "GridView Builder",
               color: Colors.yellow,
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => GridViewBuilderScreen(),
+                  ),
+                );
+              },
             ),
             _buildCard(
               title: "Stack",
               color: Colors.purple,
               textColor: Colors.white,
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const StackView(),
+                  ),
+                );
+              },
             ),
           ],
         ),

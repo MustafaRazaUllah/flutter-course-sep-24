@@ -22,211 +22,211 @@ class ListviewScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(20),
                 scrollDirection: Axis.horizontal,
                 children: [
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     message: "what are you doing",
                   ),
@@ -240,242 +240,242 @@ class ListviewScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(20),
                 scrollDirection: Axis.vertical,
                 children: [
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "what are you doing",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "Hello world!",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "hello jhon,",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "How are you?",
                   ),
-                  _buildCard(
+                  buildCard(
                     context: context,
                     isVertical: true,
                     message: "what are you doing",
@@ -488,35 +488,35 @@ class ListviewScreen extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget _buildCard({
-    required BuildContext context,
-    required String message,
-    bool isVertical = false,
-  }) {
-    return Container(
-      width: MediaQuery.of(context).size.width * 0.8,
-      height: 50,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: Colors.grey,
-      ),
-      padding: const EdgeInsets.symmetric(
-        horizontal: 20,
-      ),
-      margin: isVertical
-          ? const EdgeInsets.only(bottom: 10)
-          : const EdgeInsets.only(right: 10),
-      child: Align(
-        alignment: Alignment.centerLeft,
-        child: Text(
-          message,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-          ),
+Widget buildCard({
+  required BuildContext context,
+  required String message,
+  bool isVertical = false,
+}) {
+  return Container(
+    width: MediaQuery.of(context).size.width * 0.8,
+    height: 50,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(10),
+      color: Colors.grey,
+    ),
+    padding: const EdgeInsets.symmetric(
+      horizontal: 20,
+    ),
+    margin: isVertical
+        ? const EdgeInsets.only(bottom: 10)
+        : const EdgeInsets.only(right: 10),
+    child: Align(
+      alignment: Alignment.centerLeft,
+      child: Text(
+        message,
+        style: const TextStyle(
+          color: Colors.white,
+          fontSize: 20,
         ),
       ),
-    );
-  }
+    ),
+  );
 }
