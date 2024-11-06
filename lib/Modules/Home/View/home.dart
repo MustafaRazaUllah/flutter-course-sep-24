@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/alarts_dialogboxs.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/gridview_builder.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/listview.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/listview_builder.dart';
@@ -75,6 +76,19 @@ class HomeView extends StatelessWidget {
                 );
               },
             ),
+            _buildCard(
+              title: "Alerts and Dialog boxes.",
+              color: Colors.pink,
+              textColor: Colors.white,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AlartsDialogboxs(),
+                  ),
+                );
+              },
+            ),
           ],
         ),
         // Column(
@@ -142,6 +156,7 @@ class HomeView extends StatelessWidget {
         child: Center(
           child: Text(
             title,
+            textAlign: TextAlign.center,
             style: TextStyle(
               color: textColor,
               fontSize: 18,
