@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/alarts_dialogboxs.dart';
+import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/checkbox_radio_switch.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/gridview_builder.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/listview.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/listview_builder.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/stack_view.dart';
+
+import 'components Views/toast_datepicker_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -89,6 +92,32 @@ class HomeView extends StatelessWidget {
                 );
               },
             ),
+            _buildCard(
+              title: "Check Box, Radio Button and Switch",
+              color: Colors.blue,
+              textColor: Colors.white,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CheckboxRadioSwitch(),
+                  ),
+                );
+              },
+            ),
+            _buildCard(
+              title: "Toasts and Date Time Picker",
+              color: Colors.blueGrey,
+              textColor: Colors.white,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ToastDatepickerView(),
+                  ),
+                );
+              },
+            ),
           ],
         ),
         // Column(
@@ -159,7 +188,7 @@ class HomeView extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               color: textColor,
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: FontWeight.w500,
             ),
           ),
