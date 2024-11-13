@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:sessiom3flutterproject/Modules/Auth/View/register_view.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/home.dart';
 
-class LoginView extends StatefulWidget {
-  const LoginView({super.key});
+class RegisterView extends StatefulWidget {
+  const RegisterView({super.key});
 
   @override
-  State<LoginView> createState() => _LoginViewState();
+  State<RegisterView> createState() => _RegisterViewState();
 }
 
-class _LoginViewState extends State<LoginView> {
+class _RegisterViewState extends State<RegisterView> {
   bool isVisibility = false;
 
   @override
@@ -19,7 +17,7 @@ class _LoginViewState extends State<LoginView> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text(
-          "Login Screen",
+          "Register Screen",
         ),
         backgroundColor: Colors.white,
       ),
@@ -30,7 +28,7 @@ class _LoginViewState extends State<LoginView> {
             child: Column(
               children: [
                 const Text(
-                  "Login",
+                  "Register",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 30,
@@ -48,6 +46,16 @@ class _LoginViewState extends State<LoginView> {
                   ),
                 ),
                 const SizedBox(height: 50),
+                TextFormField(
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                    labelText: "Full Name",
+                    hintText: "Please Enter FullName",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(100)),
+                  ),
+                ),
+                const SizedBox(height: 20),
                 TextFormField(
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
@@ -81,20 +89,6 @@ class _LoginViewState extends State<LoginView> {
                     ),
                   ),
                 ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    onPressed: () {},
-                    child: const Text(
-                      "Forgot Password?",
-                      style: TextStyle(
-                        color: Colors.purple,
-                        fontSize: 13,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
-                ),
                 const SizedBox(height: 50),
                 GestureDetector(
                   onTap: () {
@@ -115,7 +109,7 @@ class _LoginViewState extends State<LoginView> {
                     ),
                     child: const Center(
                       child: Text(
-                        "Login",
+                        "Register",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
@@ -130,7 +124,7 @@ class _LoginViewState extends State<LoginView> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      "Don't have an account?",
+                      "Already a member?",
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 14,
@@ -139,13 +133,10 @@ class _LoginViewState extends State<LoginView> {
                     ),
                     TextButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const RegisterView()));
+                        Navigator.pop(context);
                       },
                       child: const Text(
-                        "Click here",
+                        "Login",
                         style: TextStyle(
                           color: Colors.blue,
                           fontSize: 14,
