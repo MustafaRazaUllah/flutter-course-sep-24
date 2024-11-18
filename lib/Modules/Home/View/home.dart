@@ -7,6 +7,7 @@ import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/list
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/listview_builder.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/stack_view.dart';
 
+import 'components Views/task_18_11_24.dart';
 import 'components Views/toast_datepicker_view.dart';
 
 class HomeView extends StatelessWidget {
@@ -114,6 +115,19 @@ class HomeView extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const ToastDatepickerView(),
+                  ),
+                );
+              },
+            ),
+             _buildCard(
+              title: "Task 18/11/24",
+              color: Colors.blueGrey,
+              textColor: Colors.white,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Task181124View(),
                   ),
                 );
               },
