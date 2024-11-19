@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/alarts_dialogboxs.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/checkbox_radio_switch.dart';
+import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/getx_statemanagement.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/gridview_builder.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/listview.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/listview_builder.dart';
@@ -34,12 +36,13 @@ class HomeView extends StatelessWidget {
               color: Colors.red,
               textColor: Colors.white,
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ListviewScreen(),
-                  ),
-                );
+                Get.to(() =>
+                    const ListviewScreen()); // one to next and back same screen.
+                // Get.off(() =>
+                //     const ListviewScreen()); // one to next and back one previous screen.
+                // Get.offAll(() => const ListviewScreen());
+                // Get.back();
+                // Get.close(3);
               },
             ),
             _buildCard(
@@ -119,7 +122,7 @@ class HomeView extends StatelessWidget {
                 );
               },
             ),
-             _buildCard(
+            _buildCard(
               title: "Task 18/11/24",
               color: Colors.blueGrey,
               textColor: Colors.white,
@@ -130,6 +133,14 @@ class HomeView extends StatelessWidget {
                     builder: (context) => const Task181124View(),
                   ),
                 );
+              },
+            ),
+            _buildCard(
+              title: "Calculator App",
+              color: Colors.purpleAccent,
+              textColor: Colors.white,
+              onTap: () {
+                Get.to(() => const CalculatorAppScreen());
               },
             ),
           ],

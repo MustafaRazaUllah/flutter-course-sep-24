@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ListviewScreen extends StatelessWidget {
   const ListviewScreen({super.key});
@@ -14,6 +15,12 @@ class ListviewScreen extends StatelessWidget {
       body: SizedBox.expand(
         child: Column(
           children: [
+            TextButton(
+              onPressed: () {
+                Get.back();
+              },
+              child: const Text("Back Navigate"),
+            ),
             // Horizental ListView
             SizedBox(
               height: 100,
