@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sessiom3flutterproject/Modules/Home/View%20Model/calculator_vm.dart';
 
 class CalculatorAppScreen extends StatelessWidget {
-  const CalculatorAppScreen({super.key});
+  CalculatorAppScreen({super.key});
+
+  final CalculatorViewModel _controller = Get.put(CalculatorViewModel());
 
   @override
   Widget build(BuildContext context) {
@@ -29,13 +32,49 @@ class CalculatorAppScreen extends StatelessWidget {
       body: SizedBox.expand(
         child: Column(
           children: [
+            ///
+            ///
+            /// Screen Section
+            ///
+            ///
             Container(
               width: double.infinity,
               height: MediaQuery.of(context).size.height * 0.335,
               decoration: const BoxDecoration(
                 color: Colors.black,
               ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Obx(
+                    () => Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: FittedBox(
+                        child: Text(
+                          _controller.values.isEmpty
+                              ? "0"
+                              : _controller.values.join(""),
+                          // _controller.totalValue.value.toString(),
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 50,
+                            overflow: TextOverflow.visible,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                ],
+              ),
             ),
+
+            ///
+            ///
+            /// Buttons Section
+            ///
+            ///
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -50,27 +89,44 @@ class CalculatorAppScreen extends StatelessWidget {
                           title: "AC",
                           buttonColor: Colors.grey,
                           textColor: Colors.black,
-                          onTap: () {},
+                          onTap: () {
+                            _controller.acMethod();
+                          },
                         ),
                         _buildButton(
                           context,
-                          title: "+/-",
+                          title: "C",
                           buttonColor: Colors.grey,
                           textColor: Colors.black,
-                          onTap: () {},
+                          onTap: () {
+                            if (_controller.values.isNotEmpty) {
+                              _controller.values.removeLast();
+                            }
+                            // if (_controller.values.isNotEmpty) {
+                            //   if (_controller.values.first == "-") {
+                            //     _controller.values.removeAt(0);
+                            //   } else {
+                            //     _controller.values.insert(0, "-");
+                            //   }
+                            // }
+                          },
                         ),
                         _buildButton(
                           context,
                           title: "%",
                           buttonColor: Colors.grey,
                           textColor: Colors.black,
-                          onTap: () {},
+                          onTap: () {
+                            _controller.values.add("%");
+                          },
                         ),
                         _buildButton(
                           context,
                           title: "/",
                           buttonColor: Colors.orange,
-                          onTap: () {},
+                          onTap: () {
+                            _controller.values.add("/");
+                          },
                         ),
                       ],
                     ),
@@ -80,23 +136,31 @@ class CalculatorAppScreen extends StatelessWidget {
                         _buildButton(
                           context,
                           title: "7",
-                          onTap: () {},
+                          onTap: () {
+                            _controller.values.add("7");
+                          },
                         ),
                         _buildButton(
                           context,
                           title: "8",
-                          onTap: () {},
+                          onTap: () {
+                            _controller.values.add("8");
+                          },
                         ),
                         _buildButton(
                           context,
                           title: "9",
-                          onTap: () {},
+                          onTap: () {
+                            _controller.values.add("9");
+                          },
                         ),
                         _buildButton(
                           context,
                           title: "X",
                           buttonColor: Colors.orange,
-                          onTap: () {},
+                          onTap: () {
+                            _controller.values.add("*");
+                          },
                         ),
                       ],
                     ),
@@ -106,23 +170,31 @@ class CalculatorAppScreen extends StatelessWidget {
                         _buildButton(
                           context,
                           title: "4",
-                          onTap: () {},
+                          onTap: () {
+                            _controller.values.add("4");
+                          },
                         ),
                         _buildButton(
                           context,
                           title: "5",
-                          onTap: () {},
+                          onTap: () {
+                            _controller.values.add("5");
+                          },
                         ),
                         _buildButton(
                           context,
                           title: "6",
-                          onTap: () {},
+                          onTap: () {
+                            _controller.values.add("6");
+                          },
                         ),
                         _buildButton(
                           context,
                           title: "-",
                           buttonColor: Colors.orange,
-                          onTap: () {},
+                          onTap: () {
+                            _controller.values.add("-");
+                          },
                         ),
                       ],
                     ),
@@ -132,23 +204,31 @@ class CalculatorAppScreen extends StatelessWidget {
                         _buildButton(
                           context,
                           title: "1",
-                          onTap: () {},
+                          onTap: () {
+                            _controller.values.add("1");
+                          },
                         ),
                         _buildButton(
                           context,
                           title: "2",
-                          onTap: () {},
+                          onTap: () {
+                            _controller.values.add("2");
+                          },
                         ),
                         _buildButton(
                           context,
                           title: "3",
-                          onTap: () {},
+                          onTap: () {
+                            _controller.values.add("3");
+                          },
                         ),
                         _buildButton(
                           context,
                           title: "+",
                           buttonColor: Colors.orange,
-                          onTap: () {},
+                          onTap: () {
+                            _controller.values.add("+");
+                          },
                         ),
                       ],
                     ),
@@ -161,12 +241,25 @@ class CalculatorAppScreen extends StatelessWidget {
                           width: (MediaQuery.of(context).size.height *
                               0.095 *
                               2.2),
-                          onTap: () {},
+                          onTap: () {
+                            if (_controller.values.isNotEmpty) {
+                              _controller.values.add("0");
+                            }
+                          },
                         ),
                         _buildButton(
                           context,
                           title: ".",
-                          onTap: () {},
+                          onTap: () {
+                            if (!_controller.values.contains(".")) {
+                              if (_controller.values.isEmpty) {
+                                _controller.values.add("0");
+                                _controller.values.add(".");
+                              } else {
+                                _controller.values.add(".");
+                              }
+                            }
+                          },
                         ),
                         _buildButton(
                           context,

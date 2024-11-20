@@ -140,7 +140,7 @@ class HomeView extends StatelessWidget {
               color: Colors.purpleAccent,
               textColor: Colors.white,
               onTap: () {
-                Get.to(() => const CalculatorAppScreen());
+                Get.to(() => CalculatorAppScreen());
               },
             ),
           ],
