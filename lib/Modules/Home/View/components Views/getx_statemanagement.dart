@@ -33,9 +33,7 @@ class CalculatorAppScreen extends StatelessWidget {
         child: Column(
           children: [
             ///
-            ///
             /// Screen Section
-            ///
             ///
             Container(
               width: double.infinity,
@@ -55,7 +53,6 @@ class CalculatorAppScreen extends StatelessWidget {
                           _controller.values.isEmpty
                               ? "0"
                               : _controller.values.join(""),
-                          // _controller.totalValue.value.toString(),
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 50,
@@ -71,9 +68,7 @@ class CalculatorAppScreen extends StatelessWidget {
             ),
 
             ///
-            ///
             /// Buttons Section
-            ///
             ///
             Expanded(
               child: Padding(
@@ -89,9 +84,7 @@ class CalculatorAppScreen extends StatelessWidget {
                           title: "AC",
                           buttonColor: Colors.grey,
                           textColor: Colors.black,
-                          onTap: () {
-                            _controller.acMethod();
-                          },
+                          onTap: _controller.acMethod,
                         ),
                         _buildButton(
                           context,
@@ -102,13 +95,6 @@ class CalculatorAppScreen extends StatelessWidget {
                             if (_controller.values.isNotEmpty) {
                               _controller.values.removeLast();
                             }
-                            // if (_controller.values.isNotEmpty) {
-                            //   if (_controller.values.first == "-") {
-                            //     _controller.values.removeAt(0);
-                            //   } else {
-                            //     _controller.values.insert(0, "-");
-                            //   }
-                            // }
                           },
                         ),
                         _buildButton(
@@ -116,120 +102,59 @@ class CalculatorAppScreen extends StatelessWidget {
                           title: "%",
                           buttonColor: Colors.grey,
                           textColor: Colors.black,
-                          onTap: () {
-                            _controller.values.add("%");
-                          },
+                          onTap: () => _controller.addValue("%"),
                         ),
                         _buildButton(
                           context,
                           title: "/",
                           buttonColor: Colors.orange,
-                          onTap: () {
-                            _controller.values.add("/");
-                          },
+                          onTap: () => _controller.addValue("/"),
                         ),
                       ],
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        _buildButton(
-                          context,
-                          title: "7",
-                          onTap: () {
-                            _controller.values.add("7");
-                          },
-                        ),
-                        _buildButton(
-                          context,
-                          title: "8",
-                          onTap: () {
-                            _controller.values.add("8");
-                          },
-                        ),
-                        _buildButton(
-                          context,
-                          title: "9",
-                          onTap: () {
-                            _controller.values.add("9");
-                          },
-                        ),
-                        _buildButton(
-                          context,
-                          title: "X",
-                          buttonColor: Colors.orange,
-                          onTap: () {
-                            _controller.values.add("*");
-                          },
-                        ),
+                        _buildButton(context,
+                            title: "7", onTap: () => _controller.addValue("7")),
+                        _buildButton(context,
+                            title: "8", onTap: () => _controller.addValue("8")),
+                        _buildButton(context,
+                            title: "9", onTap: () => _controller.addValue("9")),
+                        _buildButton(context,
+                            title: "X",
+                            buttonColor: Colors.orange,
+                            onTap: () => _controller.addValue("*")),
                       ],
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        _buildButton(
-                          context,
-                          title: "4",
-                          onTap: () {
-                            _controller.values.add("4");
-                          },
-                        ),
-                        _buildButton(
-                          context,
-                          title: "5",
-                          onTap: () {
-                            _controller.values.add("5");
-                          },
-                        ),
-                        _buildButton(
-                          context,
-                          title: "6",
-                          onTap: () {
-                            _controller.values.add("6");
-                          },
-                        ),
-                        _buildButton(
-                          context,
-                          title: "-",
-                          buttonColor: Colors.orange,
-                          onTap: () {
-                            _controller.values.add("-");
-                          },
-                        ),
+                        _buildButton(context,
+                            title: "4", onTap: () => _controller.addValue("4")),
+                        _buildButton(context,
+                            title: "5", onTap: () => _controller.addValue("5")),
+                        _buildButton(context,
+                            title: "6", onTap: () => _controller.addValue("6")),
+                        _buildButton(context,
+                            title: "-",
+                            buttonColor: Colors.orange,
+                            onTap: () => _controller.addValue("-")),
                       ],
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        _buildButton(
-                          context,
-                          title: "1",
-                          onTap: () {
-                            _controller.values.add("1");
-                          },
-                        ),
-                        _buildButton(
-                          context,
-                          title: "2",
-                          onTap: () {
-                            _controller.values.add("2");
-                          },
-                        ),
-                        _buildButton(
-                          context,
-                          title: "3",
-                          onTap: () {
-                            _controller.values.add("3");
-                          },
-                        ),
-                        _buildButton(
-                          context,
-                          title: "+",
-                          buttonColor: Colors.orange,
-                          onTap: () {
-                            _controller.values.add("+");
-                          },
-                        ),
+                        _buildButton(context,
+                            title: "1", onTap: () => _controller.addValue("1")),
+                        _buildButton(context,
+                            title: "2", onTap: () => _controller.addValue("2")),
+                        _buildButton(context,
+                            title: "3", onTap: () => _controller.addValue("3")),
+                        _buildButton(context,
+                            title: "+",
+                            buttonColor: Colors.orange,
+                            onTap: () => _controller.addValue("+")),
                       ],
                     ),
                     Row(
@@ -241,11 +166,7 @@ class CalculatorAppScreen extends StatelessWidget {
                           width: (MediaQuery.of(context).size.height *
                               0.095 *
                               2.2),
-                          onTap: () {
-                            if (_controller.values.isNotEmpty) {
-                              _controller.values.add("0");
-                            }
-                          },
+                          onTap: () => _controller.addValue("0"),
                         ),
                         _buildButton(
                           context,
@@ -254,10 +175,8 @@ class CalculatorAppScreen extends StatelessWidget {
                             if (!_controller.values.contains(".")) {
                               if (_controller.values.isEmpty) {
                                 _controller.values.add("0");
-                                _controller.values.add(".");
-                              } else {
-                                _controller.values.add(".");
                               }
+                              _controller.addValue(".");
                             }
                           },
                         ),
@@ -265,7 +184,7 @@ class CalculatorAppScreen extends StatelessWidget {
                           context,
                           title: "=",
                           buttonColor: Colors.orange,
-                          onTap: () {},
+                          onTap: _controller.calculateResult,
                         ),
                       ],
                     ),
@@ -290,7 +209,6 @@ class CalculatorAppScreen extends StatelessWidget {
     return Container(
       height: MediaQuery.of(context).size.height * 0.095,
       width: width ?? MediaQuery.of(context).size.height * 0.095,
-      // margin: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: buttonColor ?? Colors.white.withOpacity(0.15),
         borderRadius: BorderRadius.circular(100),
