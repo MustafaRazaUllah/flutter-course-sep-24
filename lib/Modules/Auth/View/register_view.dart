@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sessiom3flutterproject/Modules/Home/View/home.dart';
+import 'package:get/get.dart';
+import 'package:sessiom3flutterproject/Modules/Auth/View%20Model/register_viewmodel.dart';
 
 class RegisterView extends StatefulWidget {
   const RegisterView({super.key});
@@ -9,6 +10,8 @@ class RegisterView extends StatefulWidget {
 }
 
 class _RegisterViewState extends State<RegisterView> {
+  final _controller = Get.put(RegisterViewmodel());
+
   bool isVisibility = false;
 
   @override
@@ -48,6 +51,7 @@ class _RegisterViewState extends State<RegisterView> {
                 const SizedBox(height: 50),
                 TextFormField(
                   keyboardType: TextInputType.emailAddress,
+                  controller: _controller.nameRegister.value,
                   decoration: InputDecoration(
                     labelText: "Full Name",
                     hintText: "Please Enter FullName",
@@ -58,6 +62,29 @@ class _RegisterViewState extends State<RegisterView> {
                 const SizedBox(height: 20),
                 TextFormField(
                   keyboardType: TextInputType.emailAddress,
+                  controller: _controller.addressRegister.value,
+                  decoration: InputDecoration(
+                    labelText: "Address",
+                    hintText: "Please Enter Address",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(100)),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                TextFormField(
+                  keyboardType: TextInputType.emailAddress,
+                  controller: _controller.phoneRegister.value,
+                  decoration: InputDecoration(
+                    labelText: "Phone Number",
+                    hintText: "Please Enter Phone Number",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(100)),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                TextFormField(
+                  keyboardType: TextInputType.emailAddress,
+                  controller: _controller.emailRegister.value,
                   decoration: InputDecoration(
                     labelText: "Email",
                     hintText: "Enter your email",
@@ -68,6 +95,7 @@ class _RegisterViewState extends State<RegisterView> {
                 const SizedBox(height: 20),
                 TextFormField(
                   keyboardType: TextInputType.visiblePassword,
+                  controller: _controller.passwordRegister.value,
                   obscureText: !isVisibility,
                   decoration: InputDecoration(
                     labelText: "Password",
@@ -92,13 +120,7 @@ class _RegisterViewState extends State<RegisterView> {
                 const SizedBox(height: 50),
                 GestureDetector(
                   onTap: () {
-                    // print("Hello World! this user is logined.");
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const HomeView(),
-                      ),
-                    );
+                    _controller.onRegisterUser();
                   },
                   child: Container(
                     height: 50,
