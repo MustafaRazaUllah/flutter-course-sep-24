@@ -1,4 +1,4 @@
-package com.devcastle.fluttercourse
+package com.dev.flutterapp
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
@@ -8,12 +9,52 @@ import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/grid
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/listview.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/listview_builder.dart';
 import 'package:sessiom3flutterproject/Modules/Home/View/components%20Views/stack_view.dart';
+import 'package:sessiom3flutterproject/Utils/local_notification_handler.dart';
 
 import 'components Views/task_18_11_24.dart';
 import 'components Views/toast_datepicker_view.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
+
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    notificationHandler(context);
+  }
+
+  ///
+  ///
+  /// Update FCM on user profile
+  ///
+  ///
+  void notificationHandler(BuildContext context) async {
+    NotificationServices notificationServices = NotificationServices();
+    notificationServices.requestNotificationPermission();
+    notificationServices.forgroundMessage();
+    notificationServices.firebaseInit(context);
+    notificationServices.setupInteractMessage(context);
+    notificationServices.isTokenRefresh();
+    await updateFCMToken();
+  }
+
+  Future<void> updateFCMToken() async {
+    try {
+      FirebaseMessaging messaging = FirebaseMessaging.instance;
+      String? token = await messaging.getToken();
+
+      print("FCM Token : $token");
+    } catch (e) {
+      print("Error updating FCM token: $e");
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
